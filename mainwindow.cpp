@@ -244,7 +244,7 @@ void MainWindow::printHeader(QTextCursor * cursor)
 
     QModelIndex index(ui->tblMain->currentIndex());
     cursor->setBlockCharFormat(fontFormat);
-    cursor->insertText("Expenses Claim Report\n");
+    cursor->insertText("Expenses Claim Report\n\n");
     cursor->setBlockCharFormat(normalFormat);
     cursor->insertText(QString("Submission date :") + index.sibling(index.row(),1).data().toString() + "\n" +
                        "\n" + index.sibling(index.row(),2).data().toString() +
@@ -254,7 +254,7 @@ void MainWindow::printHeader(QTextCursor * cursor)
     if(qry.exec("select name, company from c_userinfo") && qry.next())
     {
         cursor->insertText("Name\t: " + qry.record().value("name").toString() + "\n");
-        cursor->insertText("Company\t:" +qry.record().value("company").toString() + "\n");
+        cursor->insertText("Company\t: " +qry.record().value("company").toString() + "\n");
     }
 }
 
@@ -460,12 +460,13 @@ void MainWindow::printFooter(QTextCursor *cursor)
 amount = locale.toString(total,'f',2);
      cursor->currentTable()->appendRows(1);
 
-     cursor->currentTable()->cellAt(2,2).begin();
-     cursor->currentTable()->cellAt(2,2).lastCursorPosition().insertText("Net Claim");
-     cursor->currentTable()->cellAt(2,2).end();
-
      QTextCharFormat fontFormat;
      fontFormat.setFontWeight(QFont::Bold);
+
+     cursor->currentTable()->cellAt(2,2).begin();
+     cursor->currentTable()->cellAt(2,2).firstCursorPosition().setBlockCharFormat(fontFormat);
+     cursor->currentTable()->cellAt(2,2).lastCursorPosition().insertText("Net Claim");
+     cursor->currentTable()->cellAt(2,2).end();
 
      cursor->currentTable()->cellAt(2,3).begin();
      cursor->currentTable()->cellAt(2,3).firstCursorPosition().setBlockFormat(negFormat);
