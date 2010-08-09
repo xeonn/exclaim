@@ -7,5 +7,6 @@
         <file alias="GEAR">img/system-software-update.png</file>
         <file alias="TYPENEW">img/code-class.png</file>
         <file alias="SHUTDOWN">img/system-shutdown.png</file>
+        <file alias="SAVE">img/document-save.png</file>
     </qresource>
 </RCC>

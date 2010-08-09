@@ -247,6 +247,16 @@
           <property name="text">
            <string>Add</string>
           </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/img/ADDNEW</normaloff>:/img/ADDNEW</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
+          </property>
          </widget>
         </item>
         <item>
@@ -265,6 +275,16 @@
           </property>
           <property name="text">
            <string>Delete</string>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/img/DELETE</normaloff>:/img/DELETE</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>24</width>
+            <height>24</height>
+           </size>
           </property>
          </widget>
         </item>
@@ -706,12 +726,26 @@
         <property name="text">
          <string>Apply</string>
         </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/SAVE</normaloff>:/img/SAVE</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="bnCancelHeader">
         <property name="text">
          <string>Close</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/SHUTDOWN</normaloff>:/img/SHUTDOWN</iconset>
         </property>
        </widget>
       </item>
@@ -731,6 +765,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -37,6 +37,16 @@
          <property name="text">
           <string>Add New Type</string>
          </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/img/ADDNEW</normaloff>:/img/ADDNEW</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
         </widget>
        </item>
        <item>
@@ -44,12 +54,32 @@
          <property name="text">
           <string>Delete Type</string>
          </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/img/DELETE</normaloff>:/img/DELETE</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
         </widget>
        </item>
        <item>
         <widget class="QCommandLinkButton" name="bnClose">
          <property name="text">
           <string>Close</string>
+         </property>
+         <property name="icon">
+          <iconset resource="resource.qrc">
+           <normaloff>:/img/SHUTDOWN</normaloff>:/img/SHUTDOWN</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
@@ -59,6 +89,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
