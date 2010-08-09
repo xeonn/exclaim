@@ -1,3 +1,11 @@
 <RCC>
-    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/img">
+        <file alias="ADDNEW">img/document-new.png</file>
+        <file alias="PRINT">img/document-print.png</file>
+        <file alias="DELETE">img/edit-delete-page.png</file>
+        <file alias="EXCLAIM">img/exclaim.png</file>
+        <file alias="GEAR">img/system-software-update.png</file>
+        <file alias="TYPENEW">img/code-class.png</file>
+        <file alias="SHUTDOWN">img/system-shutdown.png</file>
+    </qresource>
 </RCC>

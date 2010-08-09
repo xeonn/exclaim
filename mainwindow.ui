@@ -25,6 +25,16 @@
         <property name="text">
          <string>General Settings</string>
         </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/GEAR</normaloff>:/img/GEAR</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
         <property name="description">
          <string/>
         </property>
@@ -35,12 +45,32 @@
         <property name="text">
          <string>Expenses type</string>
         </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/TYPENEW</normaloff>:/img/TYPENEW</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="bnNewSubmission">
         <property name="text">
          <string>New Submission</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/ADDNEW</normaloff>:/img/ADDNEW</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -49,12 +79,32 @@
         <property name="text">
          <string>Delete Submission</string>
         </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/DELETE</normaloff>:/img/DELETE</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="bnPrintSubmission">
         <property name="text">
          <string>Print Submission</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/PRINT</normaloff>:/img/PRINT</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -63,12 +113,32 @@
         <property name="text">
          <string>About...</string>
         </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/EXCLAIM</normaloff>:/img/EXCLAIM</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QCommandLinkButton" name="bnClose">
         <property name="text">
          <string>Close</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resource.qrc">
+          <normaloff>:/img/SHUTDOWN</normaloff>:/img/SHUTDOWN</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
         </property>
        </widget>
       </item>
@@ -117,6 +187,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
