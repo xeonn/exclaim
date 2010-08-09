@@ -51,6 +51,7 @@ private:
     void printFooter(QTextCursor * cursor);
 
 private slots:
+    void on_bnAbout_clicked();
     void on_bnPrintSubmission_clicked();
     void on_bnSettings_clicked();
     void on_bnNewSubmission_clicked();

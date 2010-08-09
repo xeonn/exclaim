@@ -12,14 +12,17 @@ HEADERS += helper.hxx \
     mainwindow.h \
     trxwnd.h \
     typedlg.h \
-    settings.h
+    settings.h \
+    aboutdlg.h
 FORMS += mainwindow.ui \
     trxwnd.ui \
     typedlg.ui \
-    settings.ui
+    settings.ui \
+    aboutdlg.ui
 SOURCES += main.cpp \
     mainwindow.cpp \
     trxwnd.cpp \
     typedlg.cpp \
-    settings.cpp
+    settings.cpp \
+    aboutdlg.cpp
 RESOURCES += resource.qrc

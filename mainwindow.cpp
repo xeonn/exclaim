@@ -5,6 +5,7 @@
 #include "trxwnd.h"
 #include "typedlg.h"
 #include "settings.h"
+#include "aboutdlg.h"
 
 #include <QtSql/QSqlTableModel>
 #include <QtSql/QSqlRecord>
@@ -529,4 +530,10 @@ void MainWindow::on_bnPrintSubmission_clicked()
      {
          document->print(&printer);
      }
+}
+
+void MainWindow::on_bnAbout_clicked()
+{
+    AboutDlg dlg(this);
+    dlg.exec();
 }
