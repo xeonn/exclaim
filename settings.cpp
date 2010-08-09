@@ -73,7 +73,6 @@ bool Settings::saveData()
 {
     if(!mpModel->submitAll())
     {
-        qWarning(mpModel->lastError().text().toStdString().c_str());
         QMessageBox bx;
         bx.setText(mpModel->lastError().text());
         bx.exec();
