@@ -80,3 +80,8 @@ bool Settings::saveData()
     }
     return true;
 }
+
+void Settings::on_buttonBox_rejected()
+{
+    close();
+}
