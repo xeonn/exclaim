@@ -11,6 +11,9 @@
 
 #include <map>
 
+// Forward declaration
+class QTextCursor;
+
 typedef std::map<QString,QWidget*> MapTrx;
 
 
@@ -42,13 +45,21 @@ private:
     MapTrx          mMapTrx;
 
     QSqlDatabase mCnn;
+    void generateDocument(QTextCursor * cursor);
+    void printHeader(QTextCursor * cursor);
+    void printBody(QTextCursor * cursor);
+    void printFooter(QTextCursor * cursor);
 
 private slots:
+    void on_bnPrintSubmission_clicked();
+    void on_bnSettings_clicked();
     void on_bnNewSubmission_clicked();
     void on_bnDelSubmission_clicked();
     void on_tblMain_doubleClicked(QModelIndex index);
     void on_bnClose_clicked();
     void on_bnExpType_clicked();
+
+    void updateUI();
 };
 
 #endif // MAINWINDOW_H

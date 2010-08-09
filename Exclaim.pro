@@ -11,12 +11,15 @@ QT += sql
 HEADERS += helper.hxx \
     mainwindow.h \
     trxwnd.h \
-    typedlg.h
+    typedlg.h \
+    settings.h
 FORMS += mainwindow.ui \
     trxwnd.ui \
-    typedlg.ui
+    typedlg.ui \
+    settings.ui
 SOURCES += main.cpp \
     mainwindow.cpp \
     trxwnd.cpp \
-    typedlg.cpp
+    typedlg.cpp \
+    settings.cpp
 RESOURCES += resource.qrc
