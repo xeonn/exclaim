@@ -151,12 +151,20 @@ void MainWindow::on_bnDelSubmission_clicked()
 
     QSqlTableModel * pModel = static_cast<QSqlTableModel*>(ui->tblMain->model());
     QString str = pModel->record(ui->tblMain->currentIndex().row()).value("c_submission_id").toString();
+    QString strTitle = pModel->record(ui->tblMain->currentIndex().row()).value("name").toString();
 
     QString sql = "DELETE FROM c_submission WHERE c_submission_id = \'"
         + str
         + "\';";
 
     QSqlQuery qry;
+
+    QString sWarning = "This action cannot be undone. Your \"" + strTitle + "\" and all claims details will be deleted." +
+                       QString("\nAre you sure you want to do this?");
+    QMessageBox bx(QMessageBox::Warning,"Delete Record", sWarning, QMessageBox::Ok | QMessageBox::Cancel);
+    if(!bx.exec()) // Accepted have value of 1
+        return;
+
     if(!qry.exec(sql))
     {
         QMessageBox bx;
